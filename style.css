@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --base-color: 123;
+
+  --bg-primary: hsla(0, 0%, 100%);
+  --bg-secondary: hsla(194, 97%, 31%);
+  --primary-color:  hsla(var(--base-color), 6%, 21%, 1);
+
+  --bg-buttons-off: hsla(var(--base-color), 9%, 89%, 1);
+  --bg-rain: hsla(194, 97%, 31%, 1);
+  --bg-forest: rgb(13, 122, 60);
+  --bg-coffeeshop: rgb(105, 61, 10);
+  --bg-fireplace: rgb(172, 55, 47);
+
+  --colorbutton-on: hsla(0, 0%, 100%, 1);
+  --colorbutton-off: hsla(240, 6%, 21%, 1);
+
+  --ff-timer: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--primary-color);
+
+  display: grid;
+  align-content: center;
+  min-height: 100vh;
+  align-self: end;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+  transition: ease-in 0.1s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 19.2rem;
+}
+
+.player {
+  display: grid;
+  gap: 4.8rem;
+}
+
+#timer {
+  display: flex;
+  font-family: var(--ff-timer);
+  font-size: 12.61rem;
+  line-height: 14.8rem;
+
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: space-evenly;
+}
+
+#controls {
+  display: flex;
+  gap: 4rem;
+}
+
+.hide {
+  display: none;
+}
+
+#controls button {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+#sounds button svg {
+  width: 5.6rem;
+  height: 5.6rem;
+}
+
+#sounds button {
+  background-color: var(--bg-buttons-off);
+  width: 13.2rem;
+  height: 15.8rem;
+  border-radius: 2.4rem;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.forest svg path,
+.rain svg path,
+.coffeeshop svg path,
+.fireplace svg path {
+  fill: var(--colorbutton-off);
+}
+
+#sounds {
+  display: grid;
+  gap: 3.2rem;
+}
+
+#sounds :nth-child(1),
+#sounds :nth-child(2) {
+  display: flex;
+  gap: 3.2rem;
+}
+
+/* if turn on rain button */
+
+#sounds .forestOn {
+  background-color: var(--bg-forest);
+}
+
+#sounds .rainOn {
+  background-color: var(--bg-rain);
+}
+
+#sounds .coffeeshopOn {
+  background-color: var(--bg-coffeeshop);
+}
+
+#sounds .fireplaceOn {
+  background-color: var(--bg-fireplace);
+}
+
+#sounds button svg.white path {
+  fill: var(--colorbutton-on);
+}
